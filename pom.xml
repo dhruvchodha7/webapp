@@ -52,6 +52,7 @@
 		  <version>3.2</version>
 	  </dependency>
   </dependencies>
+<repositories></repositories>
 
   <build>
     <plugins>
@@ -90,5 +91,6 @@
       </plugin>
     </plugins>
   </build>
+	
 
 </project>
