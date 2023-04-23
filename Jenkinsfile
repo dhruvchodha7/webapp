@@ -33,7 +33,7 @@ pipeline {
 //         }
         stage('Nexus Deploy') {
             steps {
-                bat 'mvn clean deploy'
+                bat 'cd'
             }
         }
         stage('Deploy on server'){
