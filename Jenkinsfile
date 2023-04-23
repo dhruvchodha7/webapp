@@ -34,13 +34,13 @@ pipeline {
         stage('Nexus Deploy') {
             steps {
                 bat 'cd'
-                bat 'timeout -T 23'
+                bat 'start /wait timeout 23'
             }
         }
         stage('Deploy on server'){
             steps{
                 bat 'cd'
-                bat 'timeout -T 3'
+                bat 'start /wait timeout 3'
             }
         }
     }
