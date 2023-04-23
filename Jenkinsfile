@@ -36,5 +36,10 @@ pipeline {
                 bat 'mvn clean deploy'
             }
         }
+        stage('Deploy on server'){
+            steps{
+                bat 'echo "hello world"'
+            }
+        }
     }
 }
