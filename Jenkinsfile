@@ -38,7 +38,7 @@ pipeline {
         }
         stage('Deploy on server'){
             steps{
-                bat 'echo "hello world"'
+                bat 'cd'
             }
         }
     }
