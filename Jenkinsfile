@@ -26,15 +26,15 @@ pipeline {
                 }
             }
         }
-//         stage('Sonar-Report') {
-//             steps {
-//                 bat 'mvn clean install sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.analysis.mode=publish'
-//             }
-//         }
+        stage('Sonar-Report') {
+            steps {
+                bat 'mvn clean install sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.analysis.mode=publish'
+            }
+        }
         stage('Nexus Deploy') {
             steps {
-                bat 'cd'
-                bat 'start /wait timeout 23'
+                bat 'mvn clean deploy'
+
             }
         }
         stage('Deploy on server'){
